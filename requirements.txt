@@ -2,7 +2,6 @@ Flask
 numpy
 pandas
 joblib
-tensorflow-cpu>=2.15.0,<2.20.0
 h5py
 flask>=2.3.0,<3.0.0
 tensorflow-cpu>=2.15.0,<2.20.0
