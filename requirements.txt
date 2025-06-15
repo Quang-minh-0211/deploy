@@ -1,0 +1,6 @@
+Flask
+numpy
+pandas
+joblib
+tensorflow
+h5py
