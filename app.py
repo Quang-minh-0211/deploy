@@ -24,7 +24,7 @@ except ImportError:
     # Fallback nếu không có file config.py
     MODEL_DIR = os.path.join(os.path.dirname(__file__), 'save_models')
     WINDOW_SIZES = [2, 12, 24, 36, 72]
-    MODEL_NAMES = ['RNN', 'LSTM', 'Transformer', 'Autoformer']
+    MODEL_NAMES = ['rnn', 'lstm', 'transformer', 'autoformer']
     FEATURES = ['q64']
     
     # Tạo paths cho tất cả combinations
