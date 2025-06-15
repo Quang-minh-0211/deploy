@@ -1428,24 +1428,24 @@ def predict():
         is_fallback = False
         
         # Check if requested model is available
-        if requested_model not in models or window_size not in models[requested_model]:
-            # Try fallback to RNN
-            if 'RNN' in models and window_size in models['RNN']:
-                actual_model = 'RNN'
-                is_fallback = True
-                # Silent fallback - only log, don't expose to frontend
-                print(f"🔄 Silent fallback: {requested_model} → RNN for {window_size}h forecast")
-            else:
-                # No fallback available
-                available_models = {}
-                for mn in MODEL_NAMES:
-                    if mn in models:
-                        available_models[mn] = list(models[mn].keys())
-                return jsonify({
-                    'error': f'Model {requested_model} for {window_size}h not available and no fallback found',
-                    'available_models': available_models,
-                    'success': False
-                }), 400
+        # if requested_model not in models or window_size not in models[requested_model]:
+        #     # Try fallback to RNN
+        #     if 'RNN' in models and window_size in models['RNN']:
+        #         actual_model = 'RNN'
+        #         is_fallback = True
+        #         # Silent fallback - only log, don't expose to frontend
+        #         print(f"🔄 Silent fallback: {requested_model} → RNN for {window_size}h forecast")
+        #     else:
+        #         # No fallback available
+        #         available_models = {}
+        #         for mn in MODEL_NAMES:
+        #             if mn in models:
+        #                 available_models[mn] = list(models[mn].keys())
+        #         return jsonify({
+        #             'error': f'Model {requested_model} for {window_size}h not available and no fallback found',
+        #             'available_models': available_models,
+        #             'success': False
+        #         }), 400
         
         # Chuyển đổi thành DataFrame
         df = pd.DataFrame(input_data)
