@@ -1427,7 +1427,7 @@ def predict():
         actual_model = requested_model
         is_fallback = False
         
-        Check if requested model is available
+        # Check if requested model is available
         if requested_model not in models or window_size not in models[requested_model]:
             # Try fallback to RNN
             if 'rnn' in models and window_size in models['rnn']:
