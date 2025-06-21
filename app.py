@@ -584,9 +584,7 @@ HTML_TEMPLATE = """
                 margin: 2px;
             }
         }
-        #modelInfo {
-            display: none !important;
-        }
+       
     </style>
 </head>
 <body>
@@ -708,11 +706,11 @@ HTML_TEMPLATE = """
                     <div class="card-header bg-info text-white">
                         <h6 class="mb-0"><i class="fas fa-chart-bar"></i> Model Performance</h6>
                     </div>
-                    <div class="card-body" id="modelInfo">
+                    <div class="card-body" >
                         <div class="model-performance">
                             <div class="text-center">
                                 <h6 class="mb-1">Select model & horizon</h6>
-                                <small>Performance metrics will appear here</small>
+                                <p>Model Loaded</p>
                             </div>
                         </div>
                     </div>
